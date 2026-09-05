@@ -241,7 +241,15 @@
   .store-header{height:112px;border:0;background:#f2f4f6}.store-header-brand{font-weight:850}.store-header-branch{letter-spacing:.12em;font-weight:750}
   .store-body{padding:22px}.store-info-text{font-size:.82rem;color:#4e5968}.store-details{border-color:var(--border)}
   .reserve-btn{border:0;border-radius:10px;background:#f2f4f6;padding:9px 13px;font-weight:750;color:#333d4b}.reserve-btn:first-child{background:var(--red);color:#fff}
-  .store-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:-22px -22px 18px}
+  .store-gallery{display:grid;grid-template-columns:1fr;gap:6px;margin:0 0 18px}
+  .verified-photo{margin:0;background:#f2f4f6;border-radius:16px;overflow:hidden}
+  .verified-photo img{display:block;width:100%;height:280px;object-fit:contain;background:#161616}
+  .verified-photo figcaption{padding:12px 14px;font-size:.8rem;color:#4e5968;line-height:1.5}
+  .signature-gallery .verified-photo img{height:360px}
+  .store-card{display:flex;flex-direction:column}.store-body{flex:1;display:flex;flex-direction:column}.store-body .bp-btns{margin-top:auto;padding-top:16px;flex-wrap:wrap}
+  .reserve-btn{min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+  :focus-visible{outline:3px solid #3182f6;outline-offset:4px}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.fade-in{opacity:1;transform:none;transition:none}.slide{transition:none}}
   .store-gallery-item{height:92px;background-size:cover;background-position:center;position:relative;overflow:hidden}
   .store-gallery-item::after{content:attr(data-label);position:absolute;left:7px;bottom:7px;padding:4px 7px;border-radius:7px;background:rgba(0,0,0,.58);color:#fff;font-size:.62rem;font-weight:700;backdrop-filter:blur(5px)}
   .signature-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:36px}
@@ -250,6 +258,7 @@
   .btn-red{border:0;border-radius:12px;background:var(--red);color:#fff;font-weight:750;letter-spacing:-.01em;padding:14px 22px}
   footer{padding:42px max(24px,calc((100vw - 1124px)/2));border:0}.footer-copy{font-size:.74rem}
   @media(max-width:768px){
+    nav{flex-wrap:wrap;gap:8px}.nav-links{display:flex;width:100%;gap:2px;overflow-x:auto}.nav-links a{padding:10px 9px;white-space:nowrap;font-size:.8rem}section{scroll-margin-top:120px}
     nav{padding:12px 20px}.nav-logo-ko{font-size:.95rem}#hero{height:82vh;min-height:620px;border-radius:0 0 26px 26px}
     .hero-content{padding:28px}.hero-values{display:grid;grid-template-columns:1fr 1fr}.hv-item{min-width:0}.slide-label{right:20px;bottom:96px}
     .viz-section{margin:12px;border-radius:24px;padding:58px 20px}.stat-row{grid-template-columns:1fr 1fr}.stat-box{padding:22px 12px}
@@ -465,8 +474,8 @@
 <!-- SIGNATURE VISUALS -->
 <section id="signature">
   <p class="section-label fade-in">Signature Experience</p>
-  <h2 class="section-title fade-in">공간에서 쇼잉까지,<br>눈으로 먼저 만나는 다이닝</h2>
-  <p class="story-intro fade-in">매장 공간, 한우와 제철 식재료, 그리고 오늘의 코스를 소개하는 쇼잉 경험을 한 흐름으로 담았습니다.</p>
+  <h2 class="section-title fade-in">쇼잉함으로 만나는<br>다이닝의 시작</h2>
+  <p class="story-intro fade-in">각 브랜드의 식재료를 소개하는 쇼잉함입니다. 사진은 촬영 당시의 구성으로, 지점·계절·코스에 따라 달라질 수 있습니다.</p>
   <div class="signature-gallery fade-in" id="signatureGallery"></div>
 </section>
 
@@ -481,7 +490,7 @@
       <p>고우에프앤비는 <strong style="color:var(--red)">직원이 행복해야 고객이 행복하다</strong>는 믿음으로 성장해왔습니다.<br>
       함께 배우고, 함께 성장하며, 함께 만들어가는 조직 문화를 지향합니다.<br>
       젊고 건강한 고우에프앤비와 함께 빛날 인재를 기다립니다.<br><br>
-      현재 <strong style="color:var(--red)">총 6건</strong>의 채용공고가 진행 중입니다.</p>
+      현재 모집 중인 직무와 지원 조건은 채용공고에서 확인해 주세요.</p>
     </div>
     <a class="btn-red" href="https://www.jobkorea.co.kr/Search/?stext=(주)고우에프앤비" target="_blank">채용공고 바로가기 →</a>
   </div>
@@ -726,7 +735,7 @@
   <div class="section-line fade-in"></div>
   <div class="fade-in" style="max-width:680px">
     <p style="color:rgba(0,0,0,.55);line-height:2;font-size:.98rem;margin-bottom:44px">
-      매장 예약은 각 브랜드 페이지의 <strong style="color:var(--red)">캐치테이블 버튼 또는 네이버 예약 버튼</strong>을 통해 진행 바랍니다.<br>
+      예약과 방문 정보는 <a href="#stores">매장 안내</a>의 <strong style="color:var(--red)">캐치테이블 예약 또는 네이버 매장·예약 안내</strong>에서 확인해 주세요.<br>
       단체 예약 관련 문의는 <strong style="color:var(--red)">매장으로 직접 문의</strong> 바랍니다.<br>
       입점 / 채용 / 기타 문의사항은 아래 이메일로 연락해 주세요.
     </p>
@@ -754,7 +763,7 @@
 <div style="background:#efefef;border-top:1px solid var(--border);padding:24px 60px;text-align:center">
   <p style="font-size:.72rem;color:#999;font-family:Arial,sans-serif;line-height:2;letter-spacing:.05em">
     (주) 고우에프앤비 &nbsp;|&nbsp; 대표 : 임 형 수 &nbsp;|&nbsp; 주소 : 서울시 영등포구 국제금융로8길 27-8, 4F 460호<br>
-    대표전화 : - &nbsp;|&nbsp; 제휴문의 : <a href="mailto:gowooga1@gmail.com" style="color:#999;text-decoration:none">gowooga1@gmail.com</a>
+    제휴문의 : <a href="mailto:gowooga1@gmail.com" style="color:#999;text-decoration:none">gowooga1@gmail.com</a>
   </p>
 </div>
 
@@ -777,6 +786,7 @@
   SLIDES.forEach((_,i)=>{
     const d=document.createElement('button');
     d.className='slide-dot'+(i===0?' active':'');
+    d.setAttribute('aria-label',`${SLIDES[i].brand} ${SLIDES[i].store} 사진 보기`);
     d.onclick=()=>goSlide(i);
     dotsWrap.appendChild(d);
   });
@@ -808,7 +818,7 @@
   function filterStore(brand,btn){
     document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
     btn.classList.add('active');
-    document.querySelectorAll('.store-card').forEach(c=>{c.style.display=(brand==='all'||c.dataset.brand===brand)?'block':'none';});
+    document.querySelectorAll('.store-card').forEach(c=>{c.style.display=(brand==='all'||c.dataset.brand===brand)?'flex':'none';});
   }
   document.querySelectorAll('.loc-pin').forEach(p=>{
     p.addEventListener('click',()=>{document.querySelectorAll('.loc-pin').forEach(x=>x.classList.remove('active'));p.classList.add('active');});
@@ -816,21 +826,19 @@
 
   // 기존 메인 사진을 일관된 비율과 톤으로 재구성
   const heroVisuals=[...slides].map(s=>s.style.backgroundImage).filter(Boolean);
-  const officialVisuals={
-    gowooga:['https://post.gowoofnb.com/img/gowooga_yeouido_2.jpg','https://post.gowoofnb.com/img/gowooga_yeouido_4.jpg','https://post.gowoofnb.com/img/gowooga_yeouido_1.jpg'],
-    woara:['https://post.gowoofnb.com/img/wooara_gwanghwamun_5.jpg','https://post.gowoofnb.com/img/wooara_gwanghwamun_2.jpg','https://post.gowoofnb.com/img/wooara_gwanghwamun_4.jpg'],
-    daebojung:['https://post.gowoofnb.com/img/daebojung_cityhall_1.jpg','https://post.gowoofnb.com/img/daebojung_cityhall_3.jpg','https://post.gowoofnb.com/img/daebojung_cityhall_5.jpg'],
-    woohana:['https://post.gowoofnb.com/img/woohana_jonggak_4.jpg','https://post.gowoofnb.com/img/woohana_jonggak_1.jpg','https://post.gowoofnb.com/img/woohana_jonggak_3.jpg']
-  };
+  // 육안 확인한 기존 사진만 사용. 실내/완성 요리 사진으로 분류하지 않음.
+  const photoSources=[...slides].map(s=>s.style.backgroundImage.slice(5,-2));
+  function photoFigure(index,caption){
+    const figure=document.createElement('figure');figure.className='verified-photo';
+    const img=document.createElement('img');img.src=photoSources[index];img.alt=caption;img.loading='lazy';img.decoding='async';
+    const label=document.createElement('figcaption');label.textContent=caption;
+    figure.append(img,label);return figure;
+  }
   const gallery=document.getElementById('signatureGallery');
-  const galleryLabels=['매장 공간','한우와 제철 식재료','시그니처 쇼잉'];
-  officialVisuals.gowooga.forEach((url,i)=>{
-    const item=document.createElement('div');
-    item.className='signature-visual';
-    item.style.backgroundImage=`url('${url}')`;
-    item.dataset.caption=galleryLabels[i];
-    gallery.appendChild(item);
-  });
+  [[0,'고우가 · 쇼잉함'],[1,'우아라 · 식재료 쇼잉함'],[3,'우하나 · 쇼잉함'],[4,'대보정 · 쇼잉함']].forEach(([i,label])=>gallery.appendChild(photoFigure(i,label)));
+  gallery.style.gridTemplateColumns='repeat(auto-fit,minmax(min(100%,240px),1fr))';
+  document.querySelectorAll('.brand-tab').forEach(t=>{t.setAttribute('role','button');t.tabIndex=0;t.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();t.click();}});});
+  document.querySelectorAll('.slide-arrow').forEach((b,i)=>b.setAttribute('aria-label',i?'다음 사진':'이전 사진'));
 
   // 모든 매장 예약 버튼을 캐치테이블·네이버·지도로 통일
   const bookingData=[
@@ -847,11 +855,13 @@
   document.querySelectorAll('.store-card').forEach((card,index)=>{
     const data=bookingData[index]; if(!data)return;
     const btns=card.querySelector('.bp-btns'); if(!btns)return;
-    btns.innerHTML=`<a class="reserve-btn" href="${data.catch}" target="_blank" rel="noopener">캐치테이블</a><a class="reserve-btn" href="${data.naver}" target="_blank" rel="noopener">네이버 예약</a><a class="reserve-btn" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(data.name)}" target="_blank" rel="noopener">지도</a>`;
+    const directCatch=data.catch.includes('/ct/shop/');
+    const naverLabel=data.naver.includes('search.naver')?'네이버 매장 검색':'네이버 매장·예약 안내';
+    btns.innerHTML=`${directCatch?`<a class="reserve-btn" href="${data.catch}" target="_blank" rel="noopener">캐치테이블 예약</a>`:''}<a class="reserve-btn" href="${data.naver}" target="_blank" rel="noopener">${naverLabel}</a><a class="reserve-btn" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(data.name)}" target="_blank" rel="noopener">지도</a>`;
     const mini=document.createElement('div'); mini.className='store-gallery';
-    const visuals=officialVisuals[card.dataset.brand]||officialVisuals.gowooga;
-    mini.innerHTML=visuals.map((url,i)=>`<div class="store-gallery-item" data-label="${['공간','음식','쇼잉'][i]}" style="background-image:url('${url}');background-position:${['center','center 55%','center 42%'][i]}"></div>`).join('');
-    card.querySelector('.store-body').prepend(mini);
+    const photoIndex=[2,5,0,1,4,3,null,null,null][index];
+    if(photoIndex!==null){mini.appendChild(photoFigure(photoIndex,`${data.name} · 쇼잉함${index===3?' (브랜드 소개 사진)':''}`));card.querySelector('.store-body').prepend(mini);}
+    card.querySelectorAll('.store-info-text').forEach(el=>{const phone=el.textContent.trim();if(/^[\d-]{9,15}$/.test(phone)){const a=document.createElement('a');a.href='tel:'+phone.replace(/-/g,'');a.textContent=phone;a.style.color='inherit';el.replaceChildren(a);}});
   });
 </script>
 </body>
