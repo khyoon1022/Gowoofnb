@@ -736,6 +736,7 @@
           <div class="sd-item"><span class="sd-icon">✨</span><span class="sd-text"><strong>운영 상태</strong>정상 영업 중</span></div>
         </div>
         <div class="bp-btns" style="margin-top:14px;padding-top:14px;border-top:1px solid var(--border)">
+          <a class="reserve-btn" href="https://app.catchtable.co.kr/ct/shop/daebojung_yeouido?from=share&amp;type=DINING" target="_blank" rel="noopener">캐치테이블 예약</a>
           <a class="reserve-btn" href="tel:050713469554">전화 예약</a>
           <a class="reserve-btn" href="https://booking.naver.com/booking/6/bizes/1709250/items/7922392?area=plt&amp;theme=place" target="_blank" rel="noopener">네이버 예약</a>
         </div>
@@ -911,7 +912,7 @@
     woohana_jonggak:{name:'우하나 종각역점',photo:3,place:'2062827697',catch:'https://app.catchtable.co.kr/ct/shop/woohana',naver:'https://m.place.naver.com/restaurant/2062827697/booking'},
     woohana_yeouido:{name:'우하나 여의도점',photo:3,place:'2079441494',representative:true,catch:'https://app.catchtable.co.kr/ct/shop/woohana_yeouido',naver:'https://booking.naver.com/booking/6/bizes/1671522/items/7749530?area=ple&theme=place'},
     wooara_yeouido:{name:'우아라 여의도점',photo:1,place:'2016599803',representative:true,catch:'https://app.catchtable.co.kr/ct/shop/Sde8vZjUsvF8aDoNg5JagA',naver:'https://booking.naver.com/booking/6/bizes/1708807/items/7920249?area=plt&theme=place'},
-    daebojung_yeouido:{name:'대보정 여의도점',photo:4,place:'2042978434',representative:true,catch:null,naver:'https://booking.naver.com/booking/6/bizes/1709250/items/7922392?area=plt&theme=place',phone:'0507-1346-9554'}
+    daebojung_yeouido:{name:'대보정 여의도점',photo:4,place:'2042978434',representative:true,catch:'https://app.catchtable.co.kr/ct/shop/daebojung_yeouido?from=share&type=DINING',naver:'https://booking.naver.com/booking/6/bizes/1709250/items/7922392?area=plt&theme=place',phone:'0507-1346-9554'}
   };
   document.querySelectorAll('.store-card').forEach(card=>{
     const data=bookingData[card.dataset.store]; if(!data)throw new Error('매장 연결 정보 없음: '+card.dataset.store);
