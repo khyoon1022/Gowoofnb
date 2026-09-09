@@ -581,15 +581,78 @@ section{max-width:1248px;padding:100px 24px;margin:auto;scroll-margin-top:24px}.
 };
   // 모든 매장은 동일한 6장 슬라이드 구조를 사용합니다.
   const storePhotoSets={
- gowooga_yeouido:[{kind:'interior',src:'https://gowoofnb.com/img/store_gowooga_yeouido.jpg',fallback:'https://gowoofnb.com/img/hero_private_room.jpg'},{kind:'interior',src:'https://gowoofnb.com/img/hero_private_room.jpg',fallback:'https://gowoofnb.com/img/store_gowooga_yeouido.jpg'}],
- gowooga_gwanghwamun:[{kind:'interior',src:'https://gowoofnb.com/img/store_gowooga_gwanghwamun.jpg',fallback:'https://post.gowoofnb.com/img/wooara_gwanghwamun_1.jpg'},{kind:'interior',src:'https://post.gowoofnb.com/img/wooara_gwanghwamun_1.jpg',fallback:'https://gowoofnb.com/img/store_gowooga_gwanghwamun.jpg'}],
- gowooga_yeoksam:[{kind:'interior',src:'https://gowoofnb.com/img/store_gowooga_yeoksam.jpg',fallback:'https://post.gowoofnb.com/img/woohana_jonggak_1.jpg'},{kind:'interior',src:'https://post.gowoofnb.com/img/woohana_jonggak_1.jpg',fallback:'https://gowoofnb.com/img/store_gowooga_yeoksam.jpg'}],
- wooara_gwanghwamun:[{kind:'interior',src:'https://gowoofnb.com/img/store_wooara_gwanghwamun.jpg',fallback:'https://post.gowoofnb.com/img/wooara_gwanghwamun_5.jpg'},{kind:'interior',src:'https://post.gowoofnb.com/img/wooara_gwanghwamun_5.jpg',fallback:'https://gowoofnb.com/img/store_wooara_gwanghwamun.jpg'}],
- daebojung_cityhall:[{kind:'interior',src:'https://gowoofnb.com/img/store_daebojung_cityhall.jpg',fallback:'https://gowoofnb.com/img/hero_private_room.jpg'},{kind:'interior',src:'https://gowoofnb.com/img/hero_private_room.jpg',fallback:'https://gowoofnb.com/img/store_daebojung_cityhall.jpg'}],
- woohana_jonggak:[{kind:'interior',src:'https://gowoofnb.com/img/store_woohana_jonggak.jpg',fallback:'https://post.gowoofnb.com/img/woohana_jonggak_4.jpg'},{kind:'interior',src:'https://post.gowoofnb.com/img/woohana_jonggak_4.jpg',fallback:'https://gowoofnb.com/img/store_woohana_jonggak.jpg'}],
- woohana_yeouido:[{kind:'interior',src:'https://gowoofnb.com/img/store_woohana_yeouido.jpg',fallback:'img/woohana_yeouido-0.webp'},{kind:'interior',src:'img/woohana_yeouido-0.webp',fallback:'https://gowoofnb.com/img/store_woohana_yeouido.jpg'}],
- wooara_yeouido:[{kind:'interior',src:'https://gowoofnb.com/img/store_wooara_yeouido.jpg',fallback:'img/wooara_yeouido-1.webp'},{kind:'interior',src:'img/wooara_yeouido-1.webp',fallback:'https://gowoofnb.com/img/store_wooara_yeouido.jpg'}],
- daebojung_yeouido:[{kind:'interior',src:'https://gowoofnb.com/img/store_daebojung_yeouido.jpg',fallback:'img/daebojung_yeouido-1.webp'},{kind:'interior',src:'img/daebojung_yeouido-1.webp',fallback:'https://gowoofnb.com/img/store_daebojung_yeouido.jpg'}]
+ gowooga_yeouido:[
+  {kind:'interior',src:'https://gowoofnb.com/img/store_gowooga_yeouido.jpg',fallback:'https://gowoofnb.com/img/store_gowooga_yeouido.jpg'},
+  {kind:'interior',src:'https://gowoofnb.com/img/hero_private_room.jpg',fallback:'https://gowoofnb.com/img/hero_private_room.jpg'},
+  {kind:'interior',src:'https://d12zq4w4guyljn.cloudfront.net/750_750_20260605080245042_photo_bda79310d87a.webp',fallback:'https://d12zq4w4guyljn.cloudfront.net/750_750_20260605080245042_photo_bda79310d87a.webp'},
+  {kind:'food',src:'https://d12zq4w4guyljn.cloudfront.net/750_750_20260605080244838_photo_bda79310d87a.webp',fallback:'https://d12zq4w4guyljn.cloudfront.net/750_750_20260605080244838_photo_bda79310d87a.webp'},
+  {kind:'food',src:'https://gowoofnb.com/img/brand_gowooga.jpg',fallback:'https://gowoofnb.com/img/brand_gowooga.jpg'},
+  {kind:'showing',src:'https://gowoofnb.com/img/showing_caviar.jpg',fallback:'https://gowoofnb.com/img/showing_caviar.jpg'}
+ ],
+ gowooga_gwanghwamun:[
+  {kind:'interior',src:'https://gowoofnb.com/img/store_gowooga_gwanghwamun.jpg',fallback:'https://gowoofnb.com/img/store_gowooga_gwanghwamun.jpg'},
+  {kind:'interior',src:'https://post.gowoofnb.com/img/wooara_gwanghwamun_1.jpg',fallback:'https://post.gowoofnb.com/img/wooara_gwanghwamun_1.jpg'},
+  {kind:'interior',src:'https://post.gowoofnb.com/img/wooara_gwanghwamun_4.jpg',fallback:'https://post.gowoofnb.com/img/wooara_gwanghwamun_4.jpg'},
+  {kind:'food',src:'https://gowoofnb.com/img/store_gowooga_gwanghwamun.jpg',fallback:'https://gowoofnb.com/img/store_gowooga_gwanghwamun.jpg'},
+  {kind:'food',src:'https://gowoofnb.com/img/brand_gowooga.jpg',fallback:'https://gowoofnb.com/img/brand_gowooga.jpg'},
+  {kind:'showing',src:'https://gowoofnb.com/img/showing_caviar.jpg',fallback:'https://gowoofnb.com/img/showing_caviar.jpg'}
+ ],
+ gowooga_yeoksam:[
+  {kind:'interior',src:'https://gowoofnb.com/img/store_gowooga_yeoksam.jpg',fallback:'https://gowoofnb.com/img/store_gowooga_yeoksam.jpg'},
+  {kind:'interior',src:'https://post.gowoofnb.com/img/woohana_jonggak_1.jpg',fallback:'https://post.gowoofnb.com/img/woohana_jonggak_1.jpg'},
+  {kind:'interior',src:'https://post.gowoofnb.com/img/woohana_jonggak_4.jpg',fallback:'https://post.gowoofnb.com/img/woohana_jonggak_4.jpg'},
+  {kind:'food',src:'https://gowoofnb.com/img/store_gowooga_yeoksam.jpg',fallback:'https://gowoofnb.com/img/store_gowooga_yeoksam.jpg'},
+  {kind:'food',src:'https://gowoofnb.com/img/brand_gowooga.jpg',fallback:'https://gowoofnb.com/img/brand_gowooga.jpg'},
+  {kind:'showing',src:'https://gowoofnb.com/img/showing_caviar.jpg',fallback:'https://gowoofnb.com/img/showing_caviar.jpg'}
+ ],
+ wooara_gwanghwamun:[
+  {kind:'interior',src:'https://gowoofnb.com/img/store_wooara_gwanghwamun.jpg',fallback:'https://gowoofnb.com/img/store_wooara_gwanghwamun.jpg'},
+  {kind:'interior',src:'https://post.gowoofnb.com/img/wooara_gwanghwamun_5.jpg',fallback:'https://post.gowoofnb.com/img/wooara_gwanghwamun_5.jpg'},
+  {kind:'interior',src:'https://post.gowoofnb.com/img/wooara_gwanghwamun_1.jpg',fallback:'https://post.gowoofnb.com/img/wooara_gwanghwamun_1.jpg'},
+  {kind:'food',src:'https://gowoofnb.com/img/store_wooara_gwanghwamun.jpg',fallback:'https://gowoofnb.com/img/store_wooara_gwanghwamun.jpg'},
+  {kind:'food',src:'https://gowoofnb.com/img/brand_wooara.jpg',fallback:'https://gowoofnb.com/img/brand_wooara.jpg'},
+  {kind:'showing',src:'https://gowoofnb.com/img/showing_caviar.jpg',fallback:'https://gowoofnb.com/img/showing_caviar.jpg'}
+ ],
+ daebojung_cityhall:[
+  {kind:'interior',src:'https://gowoofnb.com/img/store_daebojung_cityhall.jpg',fallback:'https://gowoofnb.com/img/store_daebojung_cityhall.jpg'},
+  {kind:'interior',src:'https://gowoofnb.com/img/hero_private_room.jpg',fallback:'https://gowoofnb.com/img/hero_private_room.jpg'},
+  {kind:'interior',src:'https://d12zq4w4guyljn.cloudfront.net/750_750_20260103162333_photo2_bec06ee6c4b3.webp',fallback:'https://d12zq4w4guyljn.cloudfront.net/750_750_20260103162333_photo2_bec06ee6c4b3.webp'},
+  {kind:'food',src:'https://d12zq4w4guyljn.cloudfront.net/750_750_20260103162333_photo1_bec06ee6c4b3.webp',fallback:'https://d12zq4w4guyljn.cloudfront.net/750_750_20260103162333_photo1_bec06ee6c4b3.webp'},
+  {kind:'food',src:'https://gowoofnb.com/img/brand_daebojung.jpg',fallback:'https://gowoofnb.com/img/brand_daebojung.jpg'},
+  {kind:'showing',src:'https://gowoofnb.com/img/showing_box.jpg',fallback:'https://gowoofnb.com/img/showing_box.jpg'}
+ ],
+ woohana_jonggak:[
+  {kind:'interior',src:'https://gowoofnb.com/img/store_woohana_jonggak.jpg',fallback:'https://gowoofnb.com/img/store_woohana_jonggak.jpg'},
+  {kind:'interior',src:'https://post.gowoofnb.com/img/woohana_jonggak_4.jpg',fallback:'https://post.gowoofnb.com/img/woohana_jonggak_4.jpg'},
+  {kind:'interior',src:'https://post.gowoofnb.com/img/woohana_jonggak_1.jpg',fallback:'https://post.gowoofnb.com/img/woohana_jonggak_1.jpg'},
+  {kind:'food',src:'https://gowoofnb.com/img/store_woohana_jonggak.jpg',fallback:'https://gowoofnb.com/img/store_woohana_jonggak.jpg'},
+  {kind:'food',src:'https://gowoofnb.com/img/brand_woohana.jpg',fallback:'https://gowoofnb.com/img/brand_woohana.jpg'},
+  {kind:'showing',src:'https://gowoofnb.com/img/showing_charcoal.jpg',fallback:'https://gowoofnb.com/img/showing_charcoal.jpg'}
+ ],
+ woohana_yeouido:[
+  {kind:'interior',src:'https://gowoofnb.com/img/store_woohana_yeouido.jpg',fallback:'https://gowoofnb.com/img/store_woohana_yeouido.jpg'},
+  {kind:'interior',src:'img/woohana_yeouido-0.webp',fallback:'img/woohana_yeouido-0.webp'},
+  {kind:'interior',src:'img/woohana_yeouido-1.webp',fallback:'img/woohana_yeouido-1.webp'},
+  {kind:'food',src:'https://gowoofnb.com/img/store_woohana_yeouido.jpg',fallback:'https://gowoofnb.com/img/store_woohana_yeouido.jpg'},
+  {kind:'food',src:'https://gowoofnb.com/img/brand_woohana.jpg',fallback:'https://gowoofnb.com/img/brand_woohana.jpg'},
+  {kind:'showing',src:'https://gowoofnb.com/img/showing_charcoal.jpg',fallback:'https://gowoofnb.com/img/showing_charcoal.jpg'}
+ ],
+ wooara_yeouido:[
+  {kind:'interior',src:'https://gowoofnb.com/img/store_wooara_yeouido.jpg',fallback:'https://gowoofnb.com/img/store_wooara_yeouido.jpg'},
+  {kind:'interior',src:'img/wooara_yeouido-1.webp',fallback:'img/wooara_yeouido-1.webp'},
+  {kind:'interior',src:'img/wooara_yeouido-2.webp',fallback:'img/wooara_yeouido-2.webp'},
+  {kind:'food',src:'https://gowoofnb.com/img/store_wooara_yeouido.jpg',fallback:'https://gowoofnb.com/img/store_wooara_yeouido.jpg'},
+  {kind:'food',src:'https://gowoofnb.com/img/brand_wooara.jpg',fallback:'https://gowoofnb.com/img/brand_wooara.jpg'},
+  {kind:'showing',src:'https://gowoofnb.com/img/showing_caviar.jpg',fallback:'https://gowoofnb.com/img/showing_caviar.jpg'}
+ ],
+ daebojung_yeouido:[
+  {kind:'interior',src:'https://gowoofnb.com/img/store_daebojung_yeouido.jpg',fallback:'https://gowoofnb.com/img/store_daebojung_yeouido.jpg'},
+  {kind:'interior',src:'img/daebojung_yeouido-1.webp',fallback:'img/daebojung_yeouido-1.webp'},
+  {kind:'interior',src:'img/daebojung_yeouido-2.webp',fallback:'img/daebojung_yeouido-2.webp'},
+  {kind:'food',src:'https://gowoofnb.com/img/store_daebojung_yeouido.jpg',fallback:'https://gowoofnb.com/img/store_daebojung_yeouido.jpg'},
+  {kind:'food',src:'https://gowoofnb.com/img/brand_daebojung.jpg',fallback:'https://gowoofnb.com/img/brand_daebojung.jpg'},
+  {kind:'showing',src:'https://gowoofnb.com/img/showing_box.jpg',fallback:'https://gowoofnb.com/img/showing_box.jpg'}
+ ],
   };
   function createStoreSlider(storeKey,name){
     const sources=storePhotoSets[storeKey];
@@ -597,7 +660,7 @@ section{max-width:1248px;padding:100px 24px;margin:auto;scroll-margin-top:24px}.
     let current=0,timer;
     const slides=sources.map((photo,i)=>{
       const figure=document.createElement('figure');figure.className='store-slide'+(i===0?' active':'');
-      const img=document.createElement('img');img.src=photo.src;img.alt=name+' 매장 내부 사진 '+(i+1);img.loading=i===0?'eager':'lazy';img.decoding='async';
+      const img=document.createElement('img');img.src=photo.src;img.alt=name+' '+(photo.kind==='interior'?'매장 내부':photo.kind==='food'?'음식':'쇼잉함')+' 사진 '+(i+1);img.loading=i===0?'eager':'lazy';img.decoding='async';
       img.addEventListener('error',()=>{if(img.src!==new URL(photo.fallback,location.href).href)img.src=photo.fallback;else figure.remove();});figure.append(img);slider.append(figure);return figure;
     });
     const dots=document.createElement('div');dots.className='slider-dots';
