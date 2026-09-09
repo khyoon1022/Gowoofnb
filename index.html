@@ -588,7 +588,7 @@ section{max-width:1248px;padding:100px 24px;margin:auto;scroll-margin-top:24px}.
   // 규격 파일이 아직 없는 슬롯에만 쓰이는 임시 사진. 슬롯마다 서로 다른 파일이며, 없으면 null.
   // 쇼잉함 showing-0~5.webp 는 브랜드 공용 컷으로, 지점 귀속은 확인되지 않았습니다.
   const storeFallbackPhotos={
- gowooga_yeouido:[null,null,null,null,null,'img/showing-0.webp'],
+ gowooga_yeouido:[null,null,null,null,null,null],
  gowooga_gwanghwamun:[null,null,null,null,null,'img/showing-1.webp'],
  gowooga_yeoksam:[null,null,null,null,null,null],
  wooara_gwanghwamun:[null,null,null,null,null,'img/showing-3.webp'],
@@ -596,7 +596,7 @@ section{max-width:1248px;padding:100px 24px;margin:auto;scroll-margin-top:24px}.
  woohana_jonggak:[null,null,null,null,null,'img/showing-5.webp'],
  woohana_yeouido:[null,null,null,null,null,null],
  wooara_yeouido:[null,null,null,null,null,null],
- daebojung_yeouido:[null,null,null,'img/daebojung_yeouido-food-3.webp',null,null]
+ daebojung_yeouido:[null,null,null,null,null,null]
   };
   // 슬롯별 후보 = [규격 파일, 임시 사진]. 앞에서부터 시도하고 모두 실패하면 슬라이드에서 제외.
   const storePhotoSets=Object.fromEntries(Object.keys(storeFallbackPhotos).map(key=>[key,
