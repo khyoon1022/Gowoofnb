@@ -567,141 +567,106 @@ section{max-width:1248px;padding:100px 24px;margin:auto;scroll-margin-top:24px}.
     document.querySelectorAll('.store-card').forEach(c=>{c.style.display=(brand==='all'||c.dataset.brand===brand)?'flex':'none';});
   }
   const storePhotos={
-  "daebojung_yeouido": [
-    "img/daebojung_yeouido-0.webp",
-    "img/daebojung_yeouido-1.webp",
-    "img/daebojung_yeouido-2.webp",
-    "img/daebojung_yeouido-3.webp"
-  ],
-  "wooara_yeouido": [
-    "img/wooara_yeouido-0.webp",
-    "img/wooara_yeouido-1.webp",
-    "img/wooara_yeouido-2.webp",
-    "img/wooara_yeouido-3.webp"
-  ],
-  "woohana_yeouido": [
-    "img/woohana_yeouido-0.webp",
-    "img/woohana_yeouido-1.webp"
-  ]
-};
-  // 모든 매장은 동일한 6장 슬라이드 구조를 사용합니다.
-  const storePhotoSets={
- gowooga_yeouido:[
-  {kind:'interior',src:'https://gowoofnb.com/img/store_gowooga_yeouido.jpg',fallback:'https://gowoofnb.com/img/store_gowooga_yeouido.jpg'},
-  {kind:'interior',src:'https://drive.google.com/thumbnail?id=1IlM9oilbzio-n3e0w9XMjzhCRQjbcAZ3&sz=w1600',fallback:'https://gowoofnb.com/img/store_gowooga_yeouido.jpg'},
-  {kind:'interior',src:'https://drive.google.com/thumbnail?id=19AV_lE98N0OwkH-_-1ZJOfsJJcXeLNA7&sz=w1600',fallback:'https://gowoofnb.com/img/store_gowooga_yeouido.jpg'},
-  {kind:'food',src:'https://drive.google.com/thumbnail?id=1VIRpOTop3smeKT2f2oWjD9WlIYmsOZFW&sz=w1600',fallback:'https://gowoofnb.com/img/brand_gowooga.jpg'},
-  {kind:'food',src:'https://drive.google.com/thumbnail?id=1ZBWwEU99c79ReidMltxbQfmTizZm2dai&sz=w1600',fallback:'https://gowoofnb.com/img/brand_gowooga.jpg'},
-  {kind:'showing',src:'img/showing-0.webp',fallback:'https://gowoofnb.com/img/showing_caviar.jpg'}
- ],
- gowooga_gwanghwamun:[
-  {kind:'interior',src:'https://gowoofnb.com/img/store_gowooga_gwanghwamun.jpg',fallback:'https://gowoofnb.com/img/store_gowooga_gwanghwamun.jpg'},
-  {kind:'interior',src:'https://drive.google.com/thumbnail?id=1uPln7ShUd7ym_GtqrV_r8ZKOlz2LqaiZ&sz=w1600',fallback:'https://gowoofnb.com/img/store_gowooga_gwanghwamun.jpg'},
-  {kind:'interior',src:'https://drive.google.com/thumbnail?id=1pKrQx5m9G9Hnn4YbXJz5vGZ661zoOxaO&sz=w1600',fallback:'https://gowoofnb.com/img/store_gowooga_gwanghwamun.jpg'},
-  {kind:'food',src:'https://drive.google.com/thumbnail?id=1iNYJwKcnxwsDuFPV58Y0RDn8wlIjjcI_&sz=w1600',fallback:'https://gowoofnb.com/img/brand_gowooga.jpg'},
-  {kind:'food',src:'https://drive.google.com/thumbnail?id=13kntMoXBEJTA__bz6lak2YdqAX2yKx9V&sz=w1600',fallback:'https://gowoofnb.com/img/brand_gowooga.jpg'},
-  {kind:'showing',src:'img/showing-1.webp',fallback:'https://gowoofnb.com/img/showing_box.jpg'}
- ],
- gowooga_yeoksam:[
-  {kind:'interior',src:'https://gowoofnb.com/img/store_gowooga_yeoksam.jpg',fallback:'https://gowoofnb.com/img/store_gowooga_yeoksam.jpg'},
-  {kind:'interior',src:'https://drive.google.com/thumbnail?id=1lac-B7xqketRfmTtdla1cqRTAUjdnwvV&sz=w1600',fallback:'https://gowoofnb.com/img/store_gowooga_yeoksam.jpg'},
-  {kind:'interior',src:'https://drive.google.com/thumbnail?id=18LqL4wHxJbjeBkUZzbAkkDqED2kdYNEG&sz=w1600',fallback:'https://gowoofnb.com/img/store_gowooga_yeoksam.jpg'},
-  {kind:'food',src:'https://drive.google.com/thumbnail?id=1af_3xw197v-X_9dlcOrH6PeYQLLpDPWG&sz=w1600',fallback:'https://gowoofnb.com/img/brand_gowooga.jpg'},
-  {kind:'food',src:'https://drive.google.com/thumbnail?id=1WzFvTrXyMGoLkBtJSQcPSnKUL1Msn90g&sz=w1600',fallback:'https://gowoofnb.com/img/brand_gowooga.jpg'},
-  {kind:'showing',src:'img/showing-2.webp',fallback:'https://gowoofnb.com/img/showing_box.jpg'}
- ],
- wooara_gwanghwamun:[
-  {kind:'interior',src:'https://gowoofnb.com/img/store_wooara_gwanghwamun.jpg',fallback:'https://gowoofnb.com/img/store_wooara_gwanghwamun.jpg'},
-  {kind:'interior',src:'https://drive.google.com/thumbnail?id=1G3D_N6t7HuG2xY0h5nImHIIh18FStyCd&sz=w1600',fallback:'https://gowoofnb.com/img/store_wooara_gwanghwamun.jpg'},
-  {kind:'interior',src:'https://drive.google.com/thumbnail?id=16KaOJDqM7PMh1nIepThtpx8HsgGch5q8&sz=w1600',fallback:'https://gowoofnb.com/img/store_wooara_gwanghwamun.jpg'},
-  {kind:'food',src:'https://drive.google.com/thumbnail?id=1c88eFJz2_1KYE0tktmDRS1qttQlmRDph&sz=w1600',fallback:'https://gowoofnb.com/img/brand_wooara.jpg'},
-  {kind:'food',src:'https://drive.google.com/thumbnail?id=1lS8mJxQUz3faBQfBs9yd8mYVZ2LpKZ9W&sz=w1600',fallback:'https://gowoofnb.com/img/brand_wooara.jpg'},
-  {kind:'showing',src:'img/showing-3.webp',fallback:'https://gowoofnb.com/img/showing_caviar.jpg'}
- ],
- daebojung_cityhall:[
-  {kind:'interior',src:'https://gowoofnb.com/img/store_daebojung_cityhall.jpg',fallback:'https://gowoofnb.com/img/store_daebojung_cityhall.jpg'},
-  {kind:'interior',src:'https://drive.google.com/thumbnail?id=1tIivrMqDwIT2wAWbxBpcUn1G7cSLvopv&sz=w1600',fallback:'https://gowoofnb.com/img/store_daebojung_cityhall.jpg'},
-  {kind:'interior',src:'https://drive.google.com/thumbnail?id=1-rjt0YQ9qfqkENpqdKVAWKEhOGpIqMFn&sz=w1600',fallback:'https://gowoofnb.com/img/store_daebojung_cityhall.jpg'},
-  {kind:'food',src:'https://drive.google.com/thumbnail?id=14yh6TZhUv-NypmpFVtBOeChekiH58bsh&sz=w1600',fallback:'https://gowoofnb.com/img/brand_daebojung.jpg'},
-  {kind:'food',src:'https://drive.google.com/thumbnail?id=112qA_oHyUFe2Mi2thZf3T7lzEE5GLMar&sz=w1600',fallback:'https://gowoofnb.com/img/brand_daebojung.jpg'},
-  {kind:'showing',src:'img/showing-4.webp',fallback:'https://gowoofnb.com/img/showing_box.jpg'}
- ],
- woohana_jonggak:[
-  {kind:'interior',src:'https://gowoofnb.com/img/store_woohana_jonggak.jpg',fallback:'https://gowoofnb.com/img/store_woohana_jonggak.jpg'},
-  {kind:'interior',src:'https://drive.google.com/thumbnail?id=1sLgxC6Jq4Wj0yj2eKPQHVv8DU1FfXNHS&sz=w1600',fallback:'https://gowoofnb.com/img/store_woohana_jonggak.jpg'},
-  {kind:'interior',src:'https://drive.google.com/thumbnail?id=1wEFB1C_mc1PaDR2k6WC4IvlUyrGtu4lX&sz=w1600',fallback:'https://gowoofnb.com/img/store_woohana_jonggak.jpg'},
-  {kind:'food',src:'https://drive.google.com/thumbnail?id=1BhsYgwDkRP10P-k3Diz5r6JK4qmKHAMm&sz=w1600',fallback:'https://gowoofnb.com/img/brand_woohana.jpg'},
-  {kind:'food',src:'https://drive.google.com/thumbnail?id=1pG8VRMBT9WAr_tSPJCU7H63y7LMHTWc9&sz=w1600',fallback:'https://gowoofnb.com/img/brand_woohana.jpg'},
-  {kind:'showing',src:'img/showing-5.webp',fallback:'https://gowoofnb.com/img/showing_charcoal.jpg'}
- ],
- woohana_yeouido:[
-  {kind:'interior',src:'https://gowoofnb.com/img/store_woohana_yeouido.jpg',fallback:'https://gowoofnb.com/img/store_woohana_yeouido.jpg'},
-  {kind:'interior',src:'img/woohana_yeouido-0.webp',fallback:'https://gowoofnb.com/img/store_woohana_yeouido.jpg'},
-  {kind:'interior',src:'img/woohana_yeouido-1.webp',fallback:'https://gowoofnb.com/img/store_woohana_yeouido.jpg'},
-  {kind:'food',src:'https://drive.google.com/thumbnail?id=17wFoa7OYtDfYo17_f-RzKfsfy2jiRuID&sz=w1600',fallback:'https://gowoofnb.com/img/brand_woohana.jpg'},
-  {kind:'food',src:'https://gowoofnb.com/img/brand_woohana.jpg',fallback:'https://gowoofnb.com/img/brand_woohana.jpg'},
-  {kind:'showing',src:'https://gowoofnb.com/img/showing_charcoal.jpg',fallback:'img/showing-5.webp'}
- ],
- wooara_yeouido:[
-  {kind:'interior',src:'https://gowoofnb.com/img/store_wooara_yeouido.jpg',fallback:'https://gowoofnb.com/img/store_wooara_yeouido.jpg'},
-  {kind:'interior',src:'img/wooara_yeouido-1.webp',fallback:'https://gowoofnb.com/img/store_wooara_yeouido.jpg'},
-  {kind:'interior',src:'img/wooara_yeouido-2.webp',fallback:'https://gowoofnb.com/img/store_wooara_yeouido.jpg'},
-  {kind:'food',src:'https://drive.google.com/thumbnail?id=1cKuaHR2GWkiz4xm2CBKZg4lsV-GMP70R&sz=w1600',fallback:'https://gowoofnb.com/img/brand_wooara.jpg'},
-  {kind:'food',src:'https://gowoofnb.com/img/brand_wooara.jpg',fallback:'https://gowoofnb.com/img/brand_wooara.jpg'},
-  {kind:'showing',src:'img/wooara_yeouido-3.webp',fallback:'https://gowoofnb.com/img/showing_caviar.jpg'}
- ],
- daebojung_yeouido:[
-  {kind:'interior',src:'https://gowoofnb.com/img/store_daebojung_yeouido.jpg',fallback:'https://gowoofnb.com/img/store_daebojung_yeouido.jpg'},
-  {kind:'interior',src:'img/daebojung_yeouido-1.webp',fallback:'https://gowoofnb.com/img/store_daebojung_yeouido.jpg'},
-  {kind:'interior',src:'img/daebojung_yeouido-2.webp',fallback:'https://gowoofnb.com/img/store_daebojung_yeouido.jpg'},
-  {kind:'food',src:'https://drive.google.com/thumbnail?id=1UEni9zkl4KlwEx9GuQcWZoKpH467OESQ&sz=w1600',fallback:'https://gowoofnb.com/img/brand_daebojung.jpg'},
-  {kind:'food',src:'https://gowoofnb.com/img/brand_daebojung.jpg',fallback:'https://gowoofnb.com/img/brand_daebojung.jpg'},
-  {kind:'showing',src:'img/daebojung_yeouido-3.webp',fallback:'https://gowoofnb.com/img/showing_box.jpg'}
- ],
+    daebojung_yeouido:["img/daebojung_yeouido-showing-1.webp","img/daebojung_yeouido-food-1.webp","img/daebojung_yeouido-food-2.webp","img/daebojung_yeouido-food-3.webp"],
+    wooara_yeouido:["img/wooara_yeouido-showing-1.webp","img/wooara_yeouido-food-1.webp","img/wooara_yeouido-food-2.webp","img/wooara_yeouido-interior-1.webp"],
+    woohana_yeouido:["img/woohana_yeouido-showing-1.webp","img/woohana_yeouido-food-1.webp"]
   };
+  /* ── 매장 사진: 매장별 6장 (내부 3 · 음식 2 · 쇼잉함 1) ────────────────────
+     사진 추가/교체 — img/ 폴더에 아래 이름 그대로 .webp 파일을 올리면 자동 반영됩니다.
+       img/<매장키>-interior-1.webp   내부 1
+       img/<매장키>-interior-2.webp   내부 2
+       img/<매장키>-interior-3.webp   내부 3
+       img/<매장키>-food-1.webp       음식 1
+       img/<매장키>-food-2.webp       음식 2
+       img/<매장키>-showing-1.webp    쇼잉함
+     매장키: gowooga_yeouido / gowooga_gwanghwamun / gowooga_yeoksam /
+             wooara_gwanghwamun / daebojung_cityhall / woohana_jonggak /
+             woohana_yeouido / wooara_yeouido / daebojung_yeouido
+     규칙: 한 슬롯의 사진을 다른 슬롯이 다시 쓰지 않습니다. 사진이 없는 슬롯은
+           다른 사진으로 메우지 않고 슬라이드에서 제외합니다(중복 노출 방지). */
+  const STORE_PHOTO_SLOTS=[['interior',1],['interior',2],['interior',3],['food',1],['food',2],['showing',1]];
+  // 규격 파일이 아직 없는 슬롯에만 쓰이는 임시 사진. 슬롯마다 서로 다른 파일이며, 없으면 null.
+  // 쇼잉함 showing-0~5.webp 는 브랜드 공용 컷으로, 지점 귀속은 확인되지 않았습니다.
+  const storeFallbackPhotos={
+ gowooga_yeouido:[null,null,null,null,null,'img/showing-0.webp'],
+ gowooga_gwanghwamun:[null,null,null,null,null,'img/showing-1.webp'],
+ gowooga_yeoksam:[null,null,null,null,null,null],
+ wooara_gwanghwamun:[null,null,null,null,null,'img/showing-3.webp'],
+ daebojung_cityhall:[null,null,null,null,null,'img/showing-4.webp'],
+ woohana_jonggak:[null,null,null,null,null,'img/showing-5.webp'],
+ woohana_yeouido:[null,null,null,null,null,null],
+ wooara_yeouido:[null,null,null,null,null,null],
+ daebojung_yeouido:[null,null,null,'img/daebojung_yeouido-food-3.webp',null,null]
+  };
+  // 슬롯별 후보 = [규격 파일, 임시 사진]. 앞에서부터 시도하고 모두 실패하면 슬라이드에서 제외.
+  const storePhotoSets=Object.fromEntries(Object.keys(storeFallbackPhotos).map(key=>[key,
+    STORE_PHOTO_SLOTS.map(([kind,n],i)=>{
+      const local='img/'+key+'-'+kind+'-'+n+'.webp';
+      const alt=storeFallbackPhotos[key][i];
+      return {kind,candidates:alt&&alt!==local?[local,alt]:[local]};
+    })
+  ]));
+  const STORE_KIND_LABEL={interior:'매장 내부',food:'음식',showing:'쇼잉함'};
   function createStoreSlider(storeKey,name){
-    const sources=storePhotoSets[storeKey];
+    const slots=storePhotoSets[storeKey];
     const slider=document.createElement('div');slider.className='store-gallery';slider.setAttribute('aria-label',name+' 사진');
-    let current=0,timer;
-    const slides=sources.map((photo,i)=>{
-      const figure=document.createElement('figure');figure.className='store-slide'+(i===0?' active':'');
-      const img=document.createElement('img');img.src=photo.src;img.alt=name+' '+(photo.kind==='interior'?'매장 내부':photo.kind==='food'?'음식':'쇼잉함')+' 사진 '+(i+1);img.loading=i===0?'eager':'lazy';img.decoding='async';
-      img.addEventListener('error',()=>{if(img.src!==new URL(photo.fallback,location.href).href)img.src=photo.fallback;else figure.remove();});figure.append(img);slider.append(figure);return figure;
-    });
     const dots=document.createElement('div');dots.className='slider-dots';
-    const dotButtons=slides.map((_,i)=>{const dot=document.createElement('button');dot.type='button';dot.className='slider-dot'+(i===0?' active':'');dot.setAttribute('aria-label',(i+1)+'번째 사진 보기');dot.addEventListener('click',()=>show(i,true));dots.append(dot);return dot;});
-    function show(index,restart=false){current=(index+slides.length)%slides.length;slides.forEach((slide,i)=>slide.classList.toggle('active',i===current));dotButtons.forEach((dot,i)=>dot.classList.toggle('active',i===current));if(restart)start();}
-    function start(){clearInterval(timer);if(!matchMedia('(prefers-reduced-motion: reduce)').matches)timer=setInterval(()=>show(current+1),4800);}
-    [['prev','‹',-1,'이전 사진'],['next','›',1,'다음 사진']].forEach(([cls,textContent,step,label])=>{const button=document.createElement('button');button.type='button';button.className='slider-control '+cls;button.textContent=textContent;button.setAttribute('aria-label',label);button.addEventListener('click',()=>show(current+step,true));slider.append(button);});
-    slider.append(dots);slider.addEventListener('mouseenter',()=>clearInterval(timer));slider.addEventListener('mouseleave',start);slider.addEventListener('focusin',()=>clearInterval(timer));slider.addEventListener('focusout',start);start();return slider;
+    const controls=[],entries=[];let current=0,timer;
+    slots.forEach((slot,i)=>{
+      const figure=document.createElement('figure');figure.className='store-slide';
+      const img=document.createElement('img');
+      img.alt=name+' '+STORE_KIND_LABEL[slot.kind]+' 사진';
+      img.loading=i===0?'eager':'lazy';img.decoding='async';
+      let tried=0;
+      img.addEventListener('error',()=>{if(++tried<slot.candidates.length){img.src=slot.candidates[tried];return;}drop(figure);});
+      img.src=slot.candidates[0];
+      figure.append(img);slider.append(figure);
+      const dot=document.createElement('button');dot.type='button';dot.className='slider-dot';
+      dot.setAttribute('aria-label',STORE_KIND_LABEL[slot.kind]+' 사진 보기');
+      dot.addEventListener('click',()=>show(entries.findIndex(e=>e.figure===figure),true));
+      dots.append(dot);entries.push({figure,dot});
+    });
+    function drop(figure){
+      const idx=entries.findIndex(e=>e.figure===figure);if(idx<0)return;
+      entries[idx].dot.remove();entries[idx].figure.remove();entries.splice(idx,1);
+      if(!entries.length){clearInterval(timer);slider.remove();return;}
+      if(current>=entries.length)current=0;
+      render();sync();
+    }
+    function render(){entries.forEach((e,i)=>{e.figure.classList.toggle('active',i===current);e.dot.classList.toggle('active',i===current);});}
+    function sync(){const many=entries.length>1;dots.style.display=many?'':'none';controls.forEach(b=>{b.style.display=many?'':'none';});start();}
+    function show(index,restart=false){if(!entries.length)return;current=(index+entries.length)%entries.length;render();if(restart)start();}
+    function start(){clearInterval(timer);if(entries.length>1&&!matchMedia('(prefers-reduced-motion: reduce)').matches)timer=setInterval(()=>show(current+1),4800);}
+    [['prev','‹',-1,'이전 사진'],['next','›',1,'다음 사진']].forEach(([cls,textContent,step,label])=>{const button=document.createElement('button');button.type='button';button.className='slider-control '+cls;button.textContent=textContent;button.setAttribute('aria-label',label);button.addEventListener('click',()=>show(current+step,true));slider.append(button);controls.push(button);});
+    slider.append(dots);slider.addEventListener('mouseenter',()=>clearInterval(timer));slider.addEventListener('mouseleave',start);slider.addEventListener('focusin',()=>clearInterval(timer));slider.addEventListener('focusout',start);
+    render();sync();return slider;
   }
-  function actualPhoto(src,caption){
+  function actualPhoto(sources,caption){
+    const list=Array.isArray(sources)?sources.slice():[sources];
     const fig=document.createElement('figure');fig.className='verified-photo';
+    fig.dataset.rest=list.slice(1).join('|');
     const frame=document.createElement('div');frame.className='photo-frame';
-    const img=document.createElement('img');img.src=src;img.alt=caption;img.loading='lazy';img.decoding='async';
+    const img=document.createElement('img');img.src=list[0];img.alt=caption;img.loading='lazy';img.decoding='async';
     const label=document.createElement('figcaption');label.textContent=caption;
-    img.addEventListener('error',()=>{const key=Object.keys(storePhotoSets).find(k=>caption.includes(bookingData?.[k]?.name||'__none__'));const fallback=key?storePhotoSets[key][0].fallback:'';if(fallback&&img.src!==new URL(fallback,location.href).href){img.src=fallback;return;}fig.remove();},{once:false});
+    img.addEventListener('error',()=>{const next=(fig.dataset.rest||'').split('|').filter(Boolean);if(next.length){img.src=next[0];fig.dataset.rest=next.slice(1).join('|');return;}fig.remove();},{once:false});
     frame.append(img);fig.append(frame,label);return fig;
   }
   const heroSlides=[
-'https://gowoofnb.com/img/store_gowooga_yeouido.jpg','https://gowoofnb.com/img/hero_private_room.jpg',
-'https://gowoofnb.com/img/store_gowooga_gwanghwamun.jpg','https://drive.google.com/thumbnail?id=1pKrQx5m9G9Hnn4YbXJz5vGZ661zoOxaO&sz=w1600',
-'https://gowoofnb.com/img/store_gowooga_yeoksam.jpg','https://drive.google.com/thumbnail?id=18LqL4wHxJbjeBkUZzbAkkDqED2kdYNEG&sz=w1600',
-'https://gowoofnb.com/img/store_wooara_gwanghwamun.jpg','https://drive.google.com/thumbnail?id=1G3D_N6t7HuG2xY0h5nImHIIh18FStyCd&sz=w1600',
-'https://gowoofnb.com/img/store_daebojung_cityhall.jpg','https://drive.google.com/thumbnail?id=1-rjt0YQ9qfqkENpqdKVAWKEhOGpIqMFn&sz=w1600',
-'https://gowoofnb.com/img/store_woohana_jonggak.jpg','https://drive.google.com/thumbnail?id=1sLgxC6Jq4Wj0yj2eKPQHVv8DU1FfXNHS&sz=w1600',
-'https://gowoofnb.com/img/store_woohana_yeouido.jpg','img/woohana_yeouido-0.webp',
-'https://gowoofnb.com/img/store_wooara_yeouido.jpg','img/wooara_yeouido-1.webp',
-'https://gowoofnb.com/img/store_daebojung_yeouido.jpg','img/daebojung_yeouido-1.webp'
+'img/gowooga_yeoksam-interior-1.webp','img/gowooga_yeoksam-interior-2.webp',
+'img/gowooga_yeoksam-interior-3.webp','img/wooara_yeouido-interior-1.webp',
+'img/gowooga_yeoksam-food-1.webp','img/gowooga_gwanghwamun-food-1.webp',
+'img/gowooga_yeoksam-food-2.webp','img/gowooga_gwanghwamun-food-2.webp',
+'img/daebojung_yeouido-food-1.webp','img/wooara_yeouido-food-1.webp',
+'img/gowooga_yeoksam-showing-1.webp','img/woohana_yeouido-showing-1.webp'
 ];let heroIndex=0;const heroImg=document.getElementById('heroFood');const heroDots=document.getElementById('heroDots');heroSlides.forEach((src,i)=>{const d=document.createElement('button');d.className='hero-dot'+(i===0?' active':'');d.type='button';d.setAttribute('aria-label',`메인 사진 ${i+1} 보기`);d.onclick=()=>{heroIndex=i;heroImg.src=heroSlides[i];heroDots.querySelectorAll('button').forEach((b,j)=>b.classList.toggle('active',j===i))};heroDots.append(d)});heroImg.src=heroSlides[0];setInterval(()=>{heroIndex=(heroIndex+1)%heroSlides.length;heroImg.src=heroSlides[heroIndex];heroDots.querySelectorAll('button').forEach((b,j)=>b.classList.toggle('active',j===heroIndex))},5200);
   document.getElementById('heroSpace').src=storePhotos.wooara_yeouido[3];
-  document.getElementById('experienceFood').src='https://d12zq4w4guyljn.cloudfront.net/750_750_20260103162333_photo1_bec06ee6c4b3.webp';
+  document.getElementById('experienceFood').src=storePhotos.daebojung_yeouido[1];
   document.getElementById('experienceFood').dataset.fallback=storePhotos.daebojung_yeouido[3];
   document.getElementById('experienceSpace').src=storePhotos.wooara_yeouido[3];
   document.querySelectorAll('.news-card[data-store]').forEach(card=>{
     const key=card.dataset.store;
     const label=card.querySelector('.news-title').innerHTML.replace(/<br\s*\/?>/gi,' ').replace(/<[^>]+>/g,'').trim();
-    card.querySelector('.news-photo-slot').replaceChildren(actualPhoto(storePhotoSets[key][0].src,label+' 매장 사진'));
+    card.querySelector('.news-photo-slot').replaceChildren(actualPhoto(storePhotoSets[key][0].candidates,label+' 매장 사진'));
     const link=document.createElement('a');link.className='reserve-btn';link.href='#store-'+key;link.textContent='매장 안내';
     link.addEventListener('click',()=>filterStore('all',document.querySelector('.filter-btn')));
     card.append(link);
@@ -743,7 +708,7 @@ section{max-width:1248px;padding:100px 24px;margin:auto;scroll-margin-top:24px}.
   const restaurantSchema=[...document.querySelectorAll('.store-card')].map(card=>{
     const data=bookingData[card.dataset.store];
     const rows=[...card.querySelectorAll('.store-info-text')].map(el=>el.textContent.trim());
-    return {'@type':'Restaurant',name:data.name,url:`https://m.place.naver.com/restaurant/${data.place}/home`,image:storePhotoSets[card.dataset.store][0].src,telephone:rows.find(v=>/^[\d-]{9,15}$/.test(v)),priceRange:'₩₩₩₩',servesCuisine:['한식','한우 코스'],openingHoursSpecification:[{'@type':'OpeningHoursSpecification',dayOfWeek:['Monday','Tuesday','Wednesday','Thursday','Friday'],opens:'11:00',closes:'22:00'},{'@type':'OpeningHoursSpecification',dayOfWeek:['Saturday','Sunday'],opens:'11:30',closes:'22:00'}],address:{'@type':'PostalAddress',streetAddress:rows[0].replace(/^서울시\s*/,''),addressLocality:'서울',addressCountry:'KR'}};
+    return {'@type':'Restaurant',name:data.name,url:`https://m.place.naver.com/restaurant/${data.place}/home`,image:new URL(storePhotoSets[card.dataset.store][0].candidates[0],location.href).href,telephone:rows.find(v=>/^[\d-]{9,15}$/.test(v)),priceRange:'₩₩₩₩',servesCuisine:['한식','한우 코스'],openingHoursSpecification:[{'@type':'OpeningHoursSpecification',dayOfWeek:['Monday','Tuesday','Wednesday','Thursday','Friday'],opens:'11:00',closes:'22:00'},{'@type':'OpeningHoursSpecification',dayOfWeek:['Saturday','Sunday'],opens:'11:30',closes:'22:00'}],address:{'@type':'PostalAddress',streetAddress:rows[0].replace(/^서울시\s*/,''),addressLocality:'서울',addressCountry:'KR'}};
   });
   const faqSchema={'@type':'FAQPage',mainEntity:[...document.querySelectorAll('.faq-row')].map(item=>({'@type':'Question',name:item.querySelector('summary').textContent,acceptedAnswer:{'@type':'Answer',text:item.querySelector('p').textContent}}))};
   const schema=document.createElement('script');schema.type='application/ld+json';schema.textContent=JSON.stringify({'@context':'https://schema.org','@graph':[{'@type':'Organization',name:'고우에프앤비',url:'https://khyoon1022.github.io/Gowoofnb/',email:'gowooga1@gmail.com'},...restaurantSchema,faqSchema]});document.head.appendChild(schema);
