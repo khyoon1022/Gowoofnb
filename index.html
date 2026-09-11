@@ -592,7 +592,12 @@ section{max-width:1248px;padding:100px 24px;margin:auto;scroll-margin-top:24px}.
   // 쇼잉함 showing-0~5.webp 는 브랜드 공용 컷으로, 지점 귀속은 확인되지 않았습니다.
   const storeFallbackPhotos={
  gowooga_yeouido:[null,null,null,null,null,null],
- gowooga_gwanghwamun:[null,null,null,null,null,'img/showing-5.webp'],
+ gowooga_gwanghwamun:[
+  'https://d12zq4w4guyljn.cloudfront.net/750_750_20260818120017_photo2_1bd15efe9497.webp',
+  'https://d12zq4w4guyljn.cloudfront.net/750_750_20260818120017_photo5_1bd15efe9497.webp',
+  'https://d12zq4w4guyljn.cloudfront.net/750_750_20260818120017_photo6_1bd15efe9497.webp',
+  null,null,'img/showing-5.webp'
+ ],
  gowooga_yeoksam:[null,null,null,null,null,null],
  wooara_gwanghwamun:[null,null,null,null,null,'img/showing-3.webp'],
  daebojung_cityhall:[null,null,null,null,null,'img/showing-4.webp'],
@@ -663,7 +668,7 @@ section{max-width:1248px;padding:100px 24px;margin:auto;scroll-margin-top:24px}.
 'img/gowooga_yeoksam-showing-1.webp','img/woohana_yeouido-showing-1.webp'
 ];let heroIndex=0;const heroImg=document.getElementById('heroFood');const heroDots=document.getElementById('heroDots');heroSlides.forEach((src,i)=>{const d=document.createElement('button');d.className='hero-dot'+(i===0?' active':'');d.type='button';d.setAttribute('aria-label',`메인 사진 ${i+1} 보기`);d.onclick=()=>{heroIndex=i;heroImg.src=heroSlides[i];heroDots.querySelectorAll('button').forEach((b,j)=>b.classList.toggle('active',j===i))};heroDots.append(d)});heroImg.src=heroSlides[0];setInterval(()=>{heroIndex=(heroIndex+1)%heroSlides.length;heroImg.src=heroSlides[heroIndex];heroDots.querySelectorAll('button').forEach((b,j)=>b.classList.toggle('active',j===heroIndex))},5200);
   document.getElementById('heroSpace').src=storePhotos.wooara_yeouido[3];
-  const companyStores=[['고우가 여의도','img/gowooga_yeouido-interior-1.webp'],['고우가 광화문','img/gowooga_gwanghwamun-interior-1.webp'],['고우가 역삼역','img/gowooga_yeoksam-interior-1.webp'],['우아라 광화문','img/wooara_gwanghwamun-interior-1.webp'],['대보정 시청역','img/daebojung_cityhall-interior-1.webp'],['우하나 종각역','img/woohana_jonggak-interior-1.webp'],['우하나 여의도','img/woohana_yeouido-interior-1.webp'],['대보정 여의도','img/daebojung_yeouido-interior-1.webp'],['우아라 여의도','img/wooara_yeouido-interior-1.webp']];
+  const companyStores=[['고우가 여의도','img/gowooga_yeouido-interior-1.webp'],['고우가 광화문','https://d12zq4w4guyljn.cloudfront.net/750_750_20260818120017_photo2_1bd15efe9497.webp'],['고우가 역삼역','img/gowooga_yeoksam-interior-1.webp'],['우아라 광화문','img/wooara_gwanghwamun-interior-1.webp'],['대보정 시청역','img/daebojung_cityhall-interior-1.webp'],['우하나 종각역','img/woohana_jonggak-interior-1.webp'],['우하나 여의도','img/woohana_yeouido-interior-1.webp'],['대보정 여의도','img/daebojung_yeouido-interior-1.webp'],['우아라 여의도','img/wooara_yeouido-interior-1.webp']];
   const companySlider=document.getElementById('companyStoreSlider');let companyIndex=0;
   companyStores.forEach(([name,src],i)=>{const f=document.createElement('figure');f.className='company-store-slide'+(i===0?' active':'');f.innerHTML=`<img src="${src}" alt="${name} 매장 내부" loading="lazy"><figcaption>${name}</figcaption>`;companySlider.append(f)});
   if(!matchMedia('(prefers-reduced-motion: reduce)').matches)setInterval(()=>{const slides=companySlider.children;slides[companyIndex].classList.remove('active');companyIndex=(companyIndex+1)%slides.length;slides[companyIndex].classList.add('active')},2800);
