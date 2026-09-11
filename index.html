@@ -41,6 +41,7 @@ section{max-width:1248px;padding:100px 24px;margin:auto;scroll-margin-top:24px}.
 .growth-chart{margin:42px 0 34px;padding:26px 28px 22px;background:#fffaf4;border:1px solid #e7d8c5;border-radius:12px}.growth-chart-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}.growth-chart-head strong{font-size:14px}.growth-chart-head span{font-size:11px;color:#9a8d80}.growth-bars{height:170px;display:grid;grid-template-columns:repeat(5,1fr);gap:22px;align-items:end;border-bottom:1px solid #cdbda9;padding:0 12px}.growth-bar-col{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:end;gap:8px}.growth-bar-col b{font-size:13px}.growth-bar{width:42px;max-width:70%;background:linear-gradient(180deg,#a8463c,#7f2e32);border-radius:5px 5px 0 0;min-height:12px}.growth-bar-col small{font-size:10px;color:#8c8075;margin-top:2px}
 .growth-history{margin:12px 0 70px;border-top:1px solid #d8c8b5}.history-row{display:grid;grid-template-columns:92px 14px 1fr;gap:16px;padding:22px 0;border-bottom:1px solid #dfd3c5}.history-year b{display:block;color:var(--wine);font-family:Georgia,serif;font-size:14px}.history-year small{font-size:9px;letter-spacing:.14em;color:#9b8d7f}.history-dot{width:7px;height:7px;border-radius:50%;margin-top:8px;background:var(--wine);box-shadow:0 0 0 4px #f2e7e3}.history-row strong{font-size:15px}.history-row p{margin-top:5px;color:var(--gray);font-size:13px;line-height:1.65}.history-finish{display:flex;gap:24px;align-items:center;margin-top:24px;padding:16px 20px;border:1px solid #d8c8b5;border-radius:10px;background:#fbf7f1}.history-finish strong{white-space:nowrap;font-size:14px}.history-finish span{font-size:13px;color:var(--gray)}
 @media(max-width:768px){.growth-history{margin-bottom:48px}.history-row{grid-template-columns:72px 10px 1fr;gap:10px}.history-finish{display:block}.history-finish span{display:block;margin-top:6px}}
+.company-tabs{display:inline-grid;grid-template-columns:1fr 1fr;gap:6px;padding:6px;background:#efe5df;border:1px solid #dfd0c7;border-radius:16px}.company-tab{min-width:190px;border:0;background:transparent;padding:13px 22px;border-radius:11px}.company-tab.active{box-shadow:0 8px 20px rgba(67,22,30,.2)}.company-tab small{display:block;font-size:10px;letter-spacing:.12em;opacity:.7}.company-panel[hidden]{display:none!important}.company-store-slider{position:relative;height:420px;overflow:hidden;border-radius:18px 80px 18px 18px;background:#e8e0da}.company-store-slide{position:absolute;inset:0;opacity:0;transition:opacity .7s ease}.company-store-slide.active{opacity:1}.company-store-slide img{width:100%;height:100%;object-fit:cover}.company-store-slide figcaption{position:absolute;left:18px;bottom:16px;padding:6px 11px;border-radius:999px;background:rgba(25,27,30,.72);color:#fff;font-size:12px}.experience-slider{position:relative;overflow:hidden;background:#ddd}.experience-main>.experience-slider{position:absolute;inset:0;border-radius:14px}.experience-small>.experience-slider{height:265px;border-radius:12px}.experience-slider img{position:absolute!important;inset:0;width:100%!important;height:100%!important;object-fit:cover;opacity:0;transition:opacity .55s ease}.experience-slider img.active{opacity:1}.experience-slider-dots{position:absolute;z-index:2;right:14px;bottom:14px;display:flex;gap:5px}.experience-slider-dots i{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.55)}.experience-slider-dots i.active{width:18px;border-radius:6px;background:#fff}@media(max-width:800px){.company-tabs{display:grid}.company-tab{min-width:0}.company-store-slider{height:300px}}
 </style>
 </head>
 <body>
@@ -96,13 +97,14 @@ section{max-width:1248px;padding:100px 24px;margin:auto;scroll-margin-top:24px}.
 <!-- COMPANY -->
 <section id="company">
   <p class="section-label fade-in">About GOWOO F&amp;B</p>
-  <h2 class="section-title fade-in">한 곳의 진심에서<br>아홉 개의 공간으로</h2><div class="company-tabs" role="tablist" aria-label="회사소개 선택"><button class="company-tab active" role="tab" aria-selected="true" onclick="showCompanyPanel('growth',this)">회사소개 · 성장</button><button class="company-tab" role="tab" aria-selected="false" onclick="showCompanyPanel('ceo',this)">대표 말씀</button></div>
+  <h2 class="section-title fade-in">한 곳의 진심에서<br>아홉 개의 공간으로</h2><div class="company-tabs" role="tablist" aria-label="회사소개 선택"><button class="company-tab active" id="company-tab-growth" role="tab" aria-controls="company-growth" aria-selected="true" onclick="showCompanyPanel('growth',this)"><small>COMPANY</small>회사소개 · 성장</button><button class="company-tab" id="company-tab-ceo" role="tab" aria-controls="company-ceo" aria-selected="false" onclick="showCompanyPanel('ceo',this)"><small>FOUNDER</small>대표 말씀</button></div>
+  <div class="company-panel" id="company-growth" role="tabpanel" aria-labelledby="company-tab-growth">
   <div class="company-lead fade-in">
     <div class="company-copy">
       <h3>좋은 식사 경험을 설계하는<br>프리미엄 한우 다이닝 그룹</h3>
       <p>고우에프앤비는 2022년 여의도의 한우 오마카세 매장에서 출발했습니다. 최상급 한우, 프라이빗한 공간, 손님 앞에서 완성되는 다이닝 경험이라는 기준을 지키며 고우가·우아라·대보정·우하나 네 브랜드로 성장했습니다.</p>
     </div>
-    <img src="https://gowoofnb.com/img/hero_private_room.jpg" alt="고우에프앤비 프라이빗 다이닝룸" loading="lazy">
+    <div class="company-store-slider" id="companyStoreSlider" aria-label="고우에프앤비 9개 매장 내부 사진"></div>
   </div>
   <div class="growth-grid fade-in" aria-label="고우에프앤비 성장 지표">
     <div class="growth-card"><strong>2022</strong><span>여의도 첫 매장 오픈</span></div>
@@ -119,7 +121,8 @@ section{max-width:1248px;padding:100px 24px;margin:auto;scroll-margin-top:24px}.
     <div class="history-row"><div class="history-year"><b>2026.08</b><small>9 STORES</small></div><span class="history-dot"></span><div><strong>우아라 · 대보정 여의도점 오픈 · 9개점</strong><p>우아라 여의도점과 대보정 여의도점 개점으로 4개 브랜드 9개점 체계를 완성했습니다.</p></div></div>
     <div class="history-finish"><strong>2026 · 여의도 3개점 오픈 완료</strong><span>우하나 여의도점 · 우아라 여의도점 · 대보정 여의도점까지 한 곳에서 만날 수 있습니다.</span></div>
   </div>
-  <article class="ceo-card company-ceo-panel fade-in">
+  </div>
+  <article class="ceo-card company-panel company-ceo-panel fade-in" id="company-ceo" role="tabpanel" aria-labelledby="company-tab-ceo" hidden>
     <img src="https://gowoofnb.com/img/ceo.jpg" alt="고우에프앤비 임형수 대표이사" loading="lazy">
     <div class="ceo-copy">
       <p class="eyebrow">FOUNDER &amp; CEO</p>
@@ -244,11 +247,11 @@ section{max-width:1248px;padding:100px 24px;margin:auto;scroll-margin-top:24px}.
   <p class="section-label">THE DINING EXPERIENCE</p>
   <div class="experience-heading"><h2 class="section-title">식재료에서 공간까지,<br>한 번의 식사를 위해.</h2><p>처음 마주하는 순간부터 마지막 한 입까지. 고우에프앤비의 다이닝을 만나보세요.</p></div>
   <div class="experience-grid">
-    <div class="experience-main"><img id="experienceFood" alt="대보정 여의도점의 코스 요리" loading="lazy"><div class="experience-copy"><h3>정성을 담은 한 접시</h3><p>소중한 자리의 중심이 되는 음식.</p></div></div>
-    <div class="experience-small"><img id="experienceSpace" alt="우아라 여의도점 실내" loading="lazy"><div><h3>대화에 집중하는<br>시간</h3><p>함께한 사람에게 마음을 기울일 수 있는 프라이빗 다이닝.</p></div></div>
-    <div class="experience-small"><img src="img/showing-5.webp" alt="고우가 광화문점의 한우와 해산물 식재료 구성" loading="lazy"><div><h3>식사의 시작을<br>특별하게</h3><p>오늘의 식재료를 마주하는 순간부터 시작되는 다이닝 경험.</p></div></div>
+    <div class="experience-main"><div class="experience-slider" id="experienceFood" aria-label="요리 사진 슬라이드"></div><div class="experience-copy"><h3>정성을 담은 한 접시</h3><p>소중한 자리의 중심이 되는 음식.</p></div></div>
+    <div class="experience-small"><div class="experience-slider" id="experienceSpace" aria-label="프라이빗 룸 사진 슬라이드"></div><div><h3>대화에 집중하는<br>시간</h3><p>함께한 사람에게 마음을 기울일 수 있는 프라이빗 다이닝.</p></div></div>
+    <div class="experience-small"><div class="experience-slider" id="experienceShowing" aria-label="쇼잉함 사진 슬라이드"></div><div><h3>식사의 시작을<br>특별하게</h3><p>오늘의 식재료를 마주하는 순간부터 시작되는 다이닝 경험.</p></div></div>
   </div>
-  <p class="experience-note">대보정·우아라 여의도점 및 고우가 광화문점의 실제 사진입니다. 메뉴와 공간은 매장·계절·코스에 따라 다릅니다.</p>
+  <p class="experience-note">고우에프앤비 9개 매장의 실제 요리·룸·쇼잉함 사진입니다. 메뉴와 공간은 매장·계절·코스에 따라 다릅니다.</p>
 </section>
 <!-- NEWS -->
 <section id="news">
@@ -554,7 +557,7 @@ section{max-width:1248px;padding:100px 24px;margin:auto;scroll-margin-top:24px}.
 
 <script>
   const photoSources=Array.from({length:6},(_,i)=>'img/showing-'+i+'.webp');
-  function showCompanyPanel(panel,tab){document.querySelectorAll('.company-tab').forEach(t=>{t.classList.remove('active');t.setAttribute('aria-selected','false')});tab.classList.add('active');tab.setAttribute('aria-selected','true');document.querySelectorAll('.company-lead,.growth-grid,.growth-timeline').forEach(e=>e.style.display=panel==='growth'?'':'none');const ceo=document.querySelector('.company-ceo-panel');if(ceo)ceo.style.display=panel==='ceo'?'grid':'none'}
+  function showCompanyPanel(panel,tab){document.querySelectorAll('.company-tab').forEach(t=>{const on=t===tab;t.classList.toggle('active',on);t.setAttribute('aria-selected',String(on))});document.querySelectorAll('.company-panel').forEach(p=>p.hidden=p.id!=='company-'+panel)}
   function showBrand(brand,tab){
     document.querySelectorAll('.brand-tab').forEach(t=>{t.classList.remove('active');t.setAttribute('aria-selected','false')});
     document.querySelectorAll('.brand-panel').forEach(p=>p.classList.remove('active'));
@@ -589,11 +592,11 @@ section{max-width:1248px;padding:100px 24px;margin:auto;scroll-margin-top:24px}.
   // 쇼잉함 showing-0~5.webp 는 브랜드 공용 컷으로, 지점 귀속은 확인되지 않았습니다.
   const storeFallbackPhotos={
  gowooga_yeouido:[null,null,null,null,null,null],
- gowooga_gwanghwamun:[null,null,null,null,null,'img/showing-1.webp'],
+ gowooga_gwanghwamun:[null,null,null,null,null,'img/showing-5.webp'],
  gowooga_yeoksam:[null,null,null,null,null,null],
  wooara_gwanghwamun:[null,null,null,null,null,'img/showing-3.webp'],
  daebojung_cityhall:[null,null,null,null,null,'img/showing-4.webp'],
- woohana_jonggak:[null,null,null,null,null,'img/showing-5.webp'],
+ woohana_jonggak:[null,null,null,null,null,'img/showing-2.webp'],
  woohana_yeouido:[null,null,null,null,null,null],
  wooara_yeouido:[null,null,null,null,null,null],
  daebojung_yeouido:[null,null,null,null,null,null]
@@ -660,13 +663,19 @@ section{max-width:1248px;padding:100px 24px;margin:auto;scroll-margin-top:24px}.
 'img/gowooga_yeoksam-showing-1.webp','img/woohana_yeouido-showing-1.webp'
 ];let heroIndex=0;const heroImg=document.getElementById('heroFood');const heroDots=document.getElementById('heroDots');heroSlides.forEach((src,i)=>{const d=document.createElement('button');d.className='hero-dot'+(i===0?' active':'');d.type='button';d.setAttribute('aria-label',`메인 사진 ${i+1} 보기`);d.onclick=()=>{heroIndex=i;heroImg.src=heroSlides[i];heroDots.querySelectorAll('button').forEach((b,j)=>b.classList.toggle('active',j===i))};heroDots.append(d)});heroImg.src=heroSlides[0];setInterval(()=>{heroIndex=(heroIndex+1)%heroSlides.length;heroImg.src=heroSlides[heroIndex];heroDots.querySelectorAll('button').forEach((b,j)=>b.classList.toggle('active',j===heroIndex))},5200);
   document.getElementById('heroSpace').src=storePhotos.wooara_yeouido[3];
-  document.getElementById('experienceFood').src=storePhotos.daebojung_yeouido[1];
-  document.getElementById('experienceFood').dataset.fallback=storePhotos.daebojung_yeouido[3];
-  document.getElementById('experienceSpace').src=storePhotos.wooara_yeouido[3];
+  const companyStores=[['고우가 여의도','img/gowooga_yeouido-interior-1.webp'],['고우가 광화문','img/gowooga_gwanghwamun-interior-1.webp'],['고우가 역삼역','img/gowooga_yeoksam-interior-1.webp'],['우아라 광화문','img/wooara_gwanghwamun-interior-1.webp'],['대보정 시청역','img/daebojung_cityhall-interior-1.webp'],['우하나 종각역','img/woohana_jonggak-interior-1.webp'],['우하나 여의도','img/woohana_yeouido-interior-1.webp'],['대보정 여의도','img/daebojung_yeouido-interior-1.webp'],['우아라 여의도','img/wooara_yeouido-interior-1.webp']];
+  const companySlider=document.getElementById('companyStoreSlider');let companyIndex=0;
+  companyStores.forEach(([name,src],i)=>{const f=document.createElement('figure');f.className='company-store-slide'+(i===0?' active':'');f.innerHTML=`<img src="${src}" alt="${name} 매장 내부" loading="lazy"><figcaption>${name}</figcaption>`;companySlider.append(f)});
+  if(!matchMedia('(prefers-reduced-motion: reduce)').matches)setInterval(()=>{const slides=companySlider.children;slides[companyIndex].classList.remove('active');companyIndex=(companyIndex+1)%slides.length;slides[companyIndex].classList.add('active')},2800);
+  function buildExperienceSlider(id,sources,interval){const root=document.getElementById(id),dots=document.createElement('span');dots.className='experience-slider-dots';let at=0;sources.forEach((src,i)=>{const img=document.createElement('img');img.src=src;img.alt=root.getAttribute('aria-label')+' '+(i+1);img.loading='lazy';if(i===0)img.classList.add('active');root.append(img);const dot=document.createElement('i');if(i===0)dot.classList.add('active');dots.append(dot)});root.append(dots);if(!matchMedia('(prefers-reduced-motion: reduce)').matches)setInterval(()=>{const imgs=root.querySelectorAll('img'),ds=dots.children;imgs[at].classList.remove('active');ds[at].classList.remove('active');at=(at+1)%imgs.length;imgs[at].classList.add('active');ds[at].classList.add('active')},interval)}
+  buildExperienceSlider('experienceFood',['img/gowooga_yeouido-food-1.webp','img/gowooga_gwanghwamun-food-1.webp','img/gowooga_yeoksam-food-1.webp','img/wooara_gwanghwamun-food-1.webp','img/daebojung_cityhall-food-1.webp','img/woohana_jonggak-food-1.webp','img/woohana_yeouido-food-1.webp','img/daebojung_yeouido-food-1.webp','img/wooara_yeouido-food-1.webp'],1650);
+  buildExperienceSlider('experienceSpace',companyStores.map(x=>x[1]),3000);
+  buildExperienceSlider('experienceShowing',['img/gowooga_yeouido-showing-1.webp','img/showing-5.webp','img/gowooga_yeoksam-showing-1.webp','img/showing-3.webp','img/showing-4.webp','img/showing-2.webp','img/woohana_yeouido-showing-1.webp','img/daebojung_yeouido-showing-1.webp','img/wooara_yeouido-showing-1.webp'],2300);
   document.querySelectorAll('.news-card[data-store]').forEach(card=>{
     const key=card.dataset.store;
     const label=card.querySelector('.news-title').innerHTML.replace(/<br\s*\/?>/gi,' ').replace(/<[^>]+>/g,'').trim();
-    card.querySelector('.news-photo-slot').replaceChildren(actualPhoto(storePhotoSets[key][0].candidates,label+' 매장 사진'));
+    const newsSource=key==='woohana_yeouido'?['https://d12zq4w4guyljn.cloudfront.net/750_750_20260629064708219_photo_2265ee69e8c1.webp',...storePhotoSets[key][0].candidates]:storePhotoSets[key][0].candidates;
+    card.querySelector('.news-photo-slot').replaceChildren(actualPhoto(newsSource,label+' 매장 사진'));
     const link=document.createElement('a');link.className='reserve-btn';link.href='#store-'+key;link.textContent='매장 안내';
     link.addEventListener('click',()=>filterStore('all',document.querySelector('.filter-btn')));
     card.append(link);
@@ -704,7 +713,7 @@ section{max-width:1248px;padding:100px 24px;margin:auto;scroll-margin-top:24px}.
   document.querySelectorAll('a[target="_blank"]').forEach(a=>a.rel='noopener');
   document.querySelectorAll('.brand-tab').forEach((tab,i,all)=>{tab.addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Home','End'].includes(e.key))return;e.preventDefault();const n=e.key==='Home'?0:e.key==='End'?all.length-1:(i+(['ArrowRight','ArrowDown'].includes(e.key)?1:all.length-1))%all.length;all[n].focus();all[n].click();});});
   document.querySelectorAll('.filter-btn').forEach(b=>b.setAttribute('aria-pressed',String(b.classList.contains('active'))));
-  ['heroFood','heroSpace','experienceFood','experienceSpace'].forEach(id=>{const img=document.getElementById(id);img.addEventListener('error',()=>{if(img.dataset.fallback){img.src=img.dataset.fallback;delete img.dataset.fallback;return;}if(id==='heroFood'){heroIndex=(heroIndex+2)%heroSlides.length;img.src=heroSlides[heroIndex];return;}img.hidden=true;},{once:false});});
+  ['heroFood','heroSpace'].forEach(id=>{const img=document.getElementById(id);img.addEventListener('error',()=>{if(img.dataset.fallback){img.src=img.dataset.fallback;delete img.dataset.fallback;return;}if(id==='heroFood'){heroIndex=(heroIndex+2)%heroSlides.length;img.src=heroSlides[heroIndex];return;}img.hidden=true;},{once:false});});
   const restaurantSchema=[...document.querySelectorAll('.store-card')].map(card=>{
     const data=bookingData[card.dataset.store];
     const rows=[...card.querySelectorAll('.store-info-text')].map(el=>el.textContent.trim());
@@ -715,3 +724,4 @@ section{max-width:1248px;padding:100px 24px;margin:auto;scroll-margin-top:24px}.
 </script>
 </body>
 </html>
+
