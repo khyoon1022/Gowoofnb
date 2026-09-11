@@ -601,10 +601,10 @@ section{max-width:1248px;padding:100px 24px;margin:auto;scroll-margin-top:24px}.
   null,null,'img/showing-5.webp'
  ],
  gowooga_yeoksam:[null,null,null,null,null,null],
- wooara_gwanghwamun:[null,null,null,null,null,'https://lh3.googleusercontent.com/d/1lhlXFms1xTEf4EHpf9GNLTGz5SCaznsu=w1600'],
- daebojung_cityhall:[null,null,null,'https://lh3.googleusercontent.com/d/1Nq2xH3SpZYDF_VQ6Vkn_WM_4wQyloBwR=w1600','https://lh3.googleusercontent.com/d/1NGshFx6ekphWnuXs-H1YPYt_X1C-2lp3=w1600','img/showing-4.webp'],
- woohana_jonggak:[null,null,null,null,null,'https://lh3.googleusercontent.com/d/1wzDB-B34aKcvuYWRTnaxwTQx7amIAhCM=w1600'],
- woohana_yeouido:['https://lh3.googleusercontent.com/d/1o3ciUVOr_YKqPJ81u4M-qaKP2we4tBl-=w1600','https://lh3.googleusercontent.com/d/1LnvtHaujDSSffZ0mV_CSdL-7CDSKINAl=w1600','https://lh3.googleusercontent.com/d/1WSyNC0lQwikmIxNBtgHVNhLFQm6irfQX=w1600',null,'https://lh3.googleusercontent.com/d/1NubzauVFb3KY7XvAagME5gzgtRNnWILE=w1600',null],
+ wooara_gwanghwamun:[null,null,null,null,null,'img/wooara_gwanghwamun-showing-1.jpg'],
+ daebojung_cityhall:[null,null,null,'img/daebojung_cityhall-food-1.jpg','img/daebojung_cityhall-food-2.jpg','img/showing-4.webp'],
+ woohana_jonggak:[null,null,null,null,null,'img/woohana_jonggak-showing-1.jpg'],
+ woohana_yeouido:['img/woohana_yeouido-interior-1.jpg','img/woohana_yeouido-interior-2.jpg','img/woohana_yeouido-interior-3.jpg',null,'img/woohana_yeouido-food-2.jpg',null],
  wooara_yeouido:[null,null,null,null,null,null],
  daebojung_yeouido:[null,null,null,null,null,null]
   };
@@ -671,7 +671,7 @@ section{max-width:1248px;padding:100px 24px;margin:auto;scroll-margin-top:24px}.
 ];let heroIndex=0;const heroImg=document.getElementById('heroFood');const heroDots=document.getElementById('heroDots');heroSlides.forEach((src,i)=>{const d=document.createElement('button');d.className='hero-dot'+(i===0?' active':'');d.type='button';d.setAttribute('aria-label',`메인 사진 ${i+1} 보기`);d.onclick=()=>{heroIndex=i;heroImg.src=heroSlides[i];heroDots.querySelectorAll('button').forEach((b,j)=>b.classList.toggle('active',j===i))};heroDots.append(d)});heroImg.src=heroSlides[0];setInterval(()=>{heroIndex=(heroIndex+1)%heroSlides.length;heroImg.src=heroSlides[heroIndex];heroDots.querySelectorAll('button').forEach((b,j)=>b.classList.toggle('active',j===heroIndex))},5200);
   document.getElementById('heroSpace').src=storePhotos.wooara_yeouido[3];
   const companyStores=[['고우가 여의도','img/gowooga_yeouido-interior-1.webp'],['고우가 광화문','https://d12zq4w4guyljn.cloudfront.net/750_750_20260818120017_photo2_1bd15efe9497.webp'],['고우가 역삼역','img/gowooga_yeoksam-interior-1.webp'],['우아라 광화문','img/wooara_gwanghwamun-interior-1.webp'],['대보정 시청역','img/daebojung_cityhall-interior-1.webp'],['우하나 종각역','img/woohana_jonggak-interior-1.webp'],['우하나 여의도','img/woohana_yeouido-interior-1.webp'],['대보정 여의도','img/daebojung_yeouido-interior-1.webp'],['우아라 여의도','img/wooara_yeouido-interior-1.webp']];
-  companyStores[6][1]='https://lh3.googleusercontent.com/d/1o3ciUVOr_YKqPJ81u4M-qaKP2we4tBl-=w1600';
+  companyStores[6][1]='img/woohana_yeouido-interior-1.jpg';
   const companySlider=document.getElementById('companyStoreSlider');let companyIndex=0;
   companyStores.forEach(([name,src],i)=>{const f=document.createElement('figure');f.className='company-store-slide'+(i===0?' active':'');f.innerHTML=`<img src="${src}" alt="${name} 매장 내부" loading="lazy"><figcaption>${name}</figcaption>`;companySlider.append(f)});
   if(!matchMedia('(prefers-reduced-motion: reduce)').matches)setInterval(()=>{const slides=companySlider.children;slides[companyIndex].classList.remove('active');companyIndex=(companyIndex+1)%slides.length;slides[companyIndex].classList.add('active')},2800);
@@ -682,7 +682,7 @@ section{max-width:1248px;padding:100px 24px;margin:auto;scroll-margin-top:24px}.
   document.querySelectorAll('.news-card[data-store]').forEach(card=>{
     const key=card.dataset.store;
     const label=card.querySelector('.news-title').innerHTML.replace(/<br\s*\/?>/gi,' ').replace(/<[^>]+>/g,'').trim();
-    const newsSource=key==='woohana_yeouido'?['https://lh3.googleusercontent.com/d/1vYEtBS3zLEBCxiMtmrlKvRtEydCC5vsJ=w1600']:storePhotoSets[key][0].candidates;
+    const newsSource=key==='woohana_yeouido'?['img/woohana_yeouido-opening-3d.jpg']:storePhotoSets[key][0].candidates;
     card.querySelector('.news-photo-slot').replaceChildren(actualPhoto(newsSource,label+' 매장 사진'));
     const link=document.createElement('a');link.className='reserve-btn';link.href='#store-'+key;link.textContent='매장 안내';
     link.addEventListener('click',()=>filterStore('all',document.querySelector('.filter-btn')));
